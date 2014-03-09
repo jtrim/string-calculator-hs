@@ -14,6 +14,6 @@ module StringCalculator.Input (DelimitedInput(..), refine) where
   matchAgainst input = input =~ customDelimiterPattern :: (String, String, String, [String])
 
   extractDelimiterMatchFrom (numbers, _, _, [])         = DelimitedInput defaultDelimiter numbers
-  extractDelimiterMatchFrom (_, _, numbers, delimiters) = DelimitedInput (customDelimiter $ head delimiters) numbers
+  extractDelimiterMatchFrom (_, _, numbers, delimiters) = DelimitedInput (customDelimiter delimiters) numbers
 
-  customDelimiter delim = (intercalate "|" [defaultDelimiter, delim])
+  customDelimiter delims = (intercalate "|" [defaultDelimiter, head delims])
