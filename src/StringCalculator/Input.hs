@@ -1,13 +1,12 @@
-module StringCalculator.Input (DelimitedInput(..), refine) where
+module StringCalculator.Input (refine) where
   import Text.Regex.Posix
   import Data.List
+
+  import StringCalculator.Models.DelimitedInput
 
   defaultDelimiter       = ",|\n"
   customDelimiterPattern = "//(.*)\n"
 
-  data DelimitedInput = DelimitedInput {
-                          delimiter :: String,
-                          delimitedNumbers :: String } deriving (Eq, Show)
 
   refine input = extractDelimiterMatchFrom $ matchAgainst input
 
