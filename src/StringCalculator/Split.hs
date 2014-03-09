@@ -1,5 +1,4 @@
 module StringCalculator.Split (split) where
-  import Data.List
   import Text.Regex.Posix
   import StringCalculator.Input
   import StringCalculator.Models.DelimitedInput
