@@ -15,5 +15,3 @@ module StringCalculator.SplitSpec where
 
       it "splits on a custom delimiter" $ do
         Subject.split "//;\n1;2\n3,4;5" `shouldBe` ["1", "2", "3", "4", "5"]
-
-  main = hspec spec

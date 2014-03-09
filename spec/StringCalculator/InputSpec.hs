@@ -14,5 +14,3 @@ module StringCalculator.InputSpec where
       context "when given a string containing a custom delimiter" $ do
         it "returns the custom delimiter" $ do
           Subject.refine "//;\n1;2" `shouldBe` DelimitedInput ",|\n|;" "1;2"
-
-  main = hspec spec

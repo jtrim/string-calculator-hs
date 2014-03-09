@@ -24,5 +24,3 @@ module StringCalculatorSpec where
 
       it "raises an error when negatives are present" $ do
         evaluate(Subject.add "-1,2,-2") `shouldThrow` errorCall "negatives not allowed: -1,-2"
-
-  main = hspec spec

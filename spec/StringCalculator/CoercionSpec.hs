@@ -11,6 +11,3 @@ module StringCalculator.CoercionSpec where
     describe "string" $ do
       it "converts an integer to a string" $ do
         Subject.string 4 `shouldBe` "4"
-
-  main = hspec spec
-
