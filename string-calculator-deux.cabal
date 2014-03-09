@@ -15,7 +15,9 @@ cabal-version:       >=1.8
 library
   hs-source-dirs:   src
   exposed-modules: StringCalculator
-  build-depends: base == 4.6.*
+  build-depends:
+    base == 4.6.*,
+    regex-posix
 
 test-suite spec
   type: exitcode-stdio-1.0
@@ -23,5 +25,6 @@ test-suite spec
   main-is: Spec.hs
   build-depends:
     base == 4.6.*,
+    regex-posix,
     string-calculator,
     hspec >= 1.8.3
