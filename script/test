@@ -1,0 +1,7 @@
+#!/usr/bin/env sh -e
+
+cabal clean
+cabal configure --enable-tests
+cabal build
+./dist/build/spec/spec
+cabal clean
