@@ -1,10 +1,10 @@
 module StringCalculator.Split (split) where
   import Text.Regex.Posix
   import Data.List
-  import qualified StringCalculator.Delimiter as Delim
+  import qualified StringCalculator.Input as Input
 
   split input = split' numbers delimiter []
-    where (delimiter, numbers) = Delim.delimiter input
+    where (Input.DelimitedInput delimiter numbers) = Input.refine input
 
   --
 
