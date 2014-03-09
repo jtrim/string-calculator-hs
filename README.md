@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/foraker/string-calculator-hs.png?branch=jesse)](https://travis-ci.org/foraker/string-calculator-hs)
+
 [This](osherove.com/tdd-kata-1/) kata in Haskell, tested with Hspec.
 
 To get this running locally (on a Mac):
