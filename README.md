@@ -13,3 +13,4 @@ $ cabal build
 # Finally, to run the specs:
 $ ./dist/build/spec/spec
 ```
+
