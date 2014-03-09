@@ -1,3 +1,15 @@
 #!/bin/sh
 
-cabal clean && cabal configure --enable-tests && cabal build && ./dist/build/spec/spec && cabal clean
+cabal clean && cabal configure --enable-tests
+
+test_command='cabal build && ./dist/build/spec/spec && cabal clean'
+
+if [[ $1 == 'rerun' ]]; then
+  if [[ -x `which rerun` ]]; then
+    rerun -x -c -p '{src,spec}/**/*.hs' -- "$test_command && cabal configure --enable-tests"
+  else
+    echo "run 'gem install rerun' first"
+  fi
+else
+  eval $test_command
+fi
