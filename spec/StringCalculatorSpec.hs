@@ -1,12 +1,10 @@
 module StringCalculatorSpec where
   import Test.Hspec
-  import qualified StringCalculator as Subject
   import Control.Exception (evaluate)
+  import qualified StringCalculator as Subject
 
   spec = do
-
     describe "add" $ do
-
       it "returns 0 when given an empty string" $ do
         Subject.add "" `shouldBe` 0
 

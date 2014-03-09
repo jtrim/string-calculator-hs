@@ -1,12 +1,10 @@
 module StringCalculator.Input (refine) where
-  import Text.Regex.Posix
   import Data.List
-
+  import Text.Regex.Posix
   import StringCalculator.Models.DelimitedInput
 
   defaultDelimiter       = ",|\n"
   customDelimiterPattern = "//(.*)\n"
-
 
   refine input = extractDelimiterMatchFrom $ matchAgainst input
 

@@ -1,12 +1,10 @@
 module StringCalculator.ValidationSpec where
-
   import Test.Hspec
-  import qualified StringCalculator.Validation as Subject
   import Control.Exception (evaluate)
+  import qualified StringCalculator.Validation as Subject
 
   spec = do
     describe "validate" $ do
-
       context "when negative numbers are present" $ do
         it "throws an error" $ do
           evaluate(Subject.validate [-1, -2, 1, 2]) `shouldThrow` errorCall "negatives not allowed: -1,-2"

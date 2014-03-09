@@ -1,12 +1,10 @@
 module StringCalculator.InputSpec where
-
   import Test.Hspec
-  import qualified StringCalculator.Input as Subject
   import StringCalculator.Models.DelimitedInput
+  import qualified StringCalculator.Input as Subject
 
   spec = do
     describe "refine" $ do
-
       context "when given a string without a custom delimiter" $ do
         it "returns a DelimitedInput with the default delimiter" $ do
           Subject.refine "1,2" `shouldBe` DelimitedInput ",|\n" "1,2"

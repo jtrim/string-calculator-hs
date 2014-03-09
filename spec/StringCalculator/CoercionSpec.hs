@@ -1,5 +1,4 @@
 module StringCalculator.CoercionSpec where
-
   import Test.Hspec
   import qualified StringCalculator.Coercion as Subject
 
