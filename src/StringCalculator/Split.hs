@@ -7,9 +7,9 @@ module StringCalculator.Split (split) where
     where (DelimitedInput delimiter numbers) = refine input
 
   _split "" _ acc = acc
-  _split input delimiter acc = _split inputTail delimiter $ acc ++ [inputHead]
-    where (inputHead, inputTail) = input // delimiter
+  _split input delimiter acc = _split tail delimiter $ acc ++ [head]
+    where (head, tail) = input // delimiter
 
-  takeUntil input delimiter = (inputHead, inputTail)
-    where (inputHead, _, inputTail) = input =~ delimiter :: (String, String, String)
+  takeUntil input delimiter = (head, tail)
+    where (head, _, tail) = input =~ delimiter :: (String, String, String)
   (//) = takeUntil -- alias for takeUntil
