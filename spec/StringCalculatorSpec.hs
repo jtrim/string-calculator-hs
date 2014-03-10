@@ -22,3 +22,6 @@ module StringCalculatorSpec where
 
       it "raises an error when negatives are present" $ do
         evaluate(Subject.add "-1,2,-2") `shouldThrow` errorCall "negatives not allowed: -1,-2"
+
+      it "can handle spaces in the input" $ do
+        Subject.add "//;\n1, 2\n 3;4 ,5" `shouldBe` 15
